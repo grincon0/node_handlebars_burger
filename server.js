@@ -13,6 +13,7 @@ app.set('view engine', 'handlebars');
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+app.use('/', burger);
 
 
 app.listen(process.env.PORT || 3360, ()=> {
