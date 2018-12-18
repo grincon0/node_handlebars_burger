@@ -1,16 +1,17 @@
-<div class="container">
+<div class="container back">
 	<div class="row">
 		<div class="col" align="center">
 			<img src="/assets/img/b.png">
-			<h2>Eat La Burger</h2>
+			<h1>Eat La Burger</h1>
 
 		</div>
 
 
 	</div>
+	<h5>What's on the menu</h3>
 	<div class="row">
-		<h5>What's on the menu</h3>
-			<div class="col">
+		
+			<div class="col box">
 				<ul>
 					{{#each burgers}}
 					{{#unless isDevoured}}
@@ -23,8 +24,12 @@
 			</div>
 
 	</div>
+	<h5>Mmmmm...these were tasty</h3>
 	<div class="row">
-		<h5>Mmmmm...these were tasty</h3>
+		
+			<div class="col box">
+
+			
 			<ul>
 				{{#each burgers}}
 				{{#if isDevoured}}
@@ -33,13 +38,15 @@
 				{{/if}}
 				{{/each}}
 			</ul>
+			</div>
 
 
 	</div>
+	<br>
 	<div class="row">
 		<div class="col-md-12 text-center enter_section">
 			<form action="/burger/create" method="POST">
-				<input type="text" class="form-control" name="burger_name" value="">
+				<input type="text" class="form-control space" name="burger_name" value="">
 				<button type="submit" class="btn btn-primary" id="submit_burg">Submit</button>
 			</form>
 			<p>Make your own burger.</p>

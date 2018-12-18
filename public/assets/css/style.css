@@ -1,0 +1,36 @@
+
+body{
+    background-color: rgb(255, 131, 100)
+}
+
+h1,h2,h3,h4,h5{
+
+    text-align: center
+}
+p{
+    font-family: comic-sans;
+}
+
+
+.box{
+    background-color: rgb(255, 182, 174);
+    border-radius: 5px;
+    float: left;
+    clear:both;
+}
+.back{
+    background-color: rgb(255, 131, 100)
+}
+
+.space{
+    text-decoration: none;
+    background-color: rgb(100, 255, 247);
+}
+
+#submit_burg{
+    margin: 15px;
+    padding:10px;
+    position: relative;
+    top: 15%;
+
+}
