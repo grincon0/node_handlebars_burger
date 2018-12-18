@@ -1,10 +1,13 @@
 require('dotenv').config();
 
-const exporess = require('express');
+const express = require('express');
 const exphbr = require('express-handlebars');
 const path = require('path');
+const burger = require('./controllers/burger_controller');
 
 const app = express();
+
+const PORT = process.env.PORT || 8080;
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -16,6 +19,7 @@ app.use(express.json());
 app.use('/', burger);
 
 
-app.listen(process.env.PORT || 3360, ()=> {
-    console.log('Server running on port: 3360')
+app.listen(PORT, function (){
+    console.log(`App listening on PORT:${PORT}`);
+
 });

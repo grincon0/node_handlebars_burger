@@ -13,7 +13,7 @@ const burger = {
 
     }),
     allBurg: () => new Promise((resolve, reject) => {
-        orm.read('*')
+        orm.read()
             .then((res) => {
                 resolve(res);
             })
@@ -23,8 +23,9 @@ const burger = {
             })
     }),
     updateBurg: (val, id) => new Promise((resolve, reject) => {
-        orm.update('burger', 'devour', 'burger_id', val, id)
+        orm.update('burger', 'isDevoured', 'id', val, id)
             .then((res) => {
+                console.log(res);
                 resolve(res);
             })
             .catch((err) => {
